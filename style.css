@@ -1,0 +1,25 @@
+.cells {
+    width: 20px;
+    height: 20px;
+    border: solid black 1px;
+}
+
+.hover {
+    background-color: aqua;
+}
+.cells, .container{
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 320px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
