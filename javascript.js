@@ -1,19 +1,32 @@
+
+
 const container = document.querySelector('.container');
 
-for (let i=0; i < 16; i++){
-    for(let j=0; j<16; j++){
-    const cells = document.createElement('div');
-    cells.classList.add('cells');
-    container.appendChild(cells);
+// create Grid function 
+
+
+function createGrid(val){
+
+    for (i=0; i<16; i++){
+        const row = document.createElement('div');
+        container.appendChild(row);
+
+        for(j=0; j<16; j++){
+            const column = document.createElement('div');
+            column.classList.add('column');
+            row.appendChild(column);
+        }
     }
+
+    val = val
 }
 
-const cellList = document.querySelectorAll('.cells')
+createGrid(16);
 
-cellList.forEach(cells => {
-    cells.addEventListener('mouseover', () => {
-        cells.classList.add('hover');
-    });    
-});
+const cellList = document.querySelectorAll('.column');
 
-
+cellList.forEach(column => {
+    column.addEventListener('mouseover', () => {
+        column.classList.add('hovered');
+    })
+})
